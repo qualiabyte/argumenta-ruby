@@ -27,13 +27,14 @@ describe Argumenta::Argument do
   describe "record" do
     it "should get the argument's object record" do
       record = @argument.record
-      record.must_equal "argument
+      record.must_equal <<-END
+argument
 
 title My Argument ^_^
 premise 37ca8beaaac1d1b8412c9fb1fd73e524c9862ebe
 premise 29da59119a5c3cec4f7b339433e8931ea99771cf
 conclusion 3940b2a6a3d5778297f0e37a06109f9d3dcffe6d
-"
+      END
     end
   end
 
