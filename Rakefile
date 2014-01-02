@@ -1,9 +1,10 @@
 
-require 'rake/testtask'
-
 task :default => [:test]
 
-Rake::TestTask.new do |t|
-  t.libs << 'test'
-  t.test_files = FileList['test/test*.rb']
+task :test do |t|
+  $LOAD_PATH.unshift 'lib', 'test'
+  files = Dir.glob './test/**/test*.rb'
+  files.each do |f|
+    require f
+  end
 end
