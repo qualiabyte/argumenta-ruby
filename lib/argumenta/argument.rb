@@ -1,21 +1,18 @@
-
 require 'digest'
 
 module Argumenta
-
   class Argument
-
     attr_accessor :title, :premises, :conclusion
 
     # Initializes a new argument.
     #
-    #     title = "My Argument ^_^"
-    #     premises = [
-    #         "The first premise!",
-    #         "The second premise!"
-    #     ]
-    #     conclusion = "The conclusion."
-    #     argument = Argument.new title, premises, conclusion
+    #   title = "My Argument ^_^"
+    #   premises = [
+    #       "The first premise!",
+    #       "The second premise!"
+    #   ]
+    #   conclusion = "The conclusion."
+    #   argument = Argument.new title, premises, conclusion
     #
     def initialize(title, premises, conclusion)
       @title = title
@@ -25,7 +22,7 @@ module Argumenta
 
     # Gets the argument's object record.
     #
-    #     record = argument.record
+    #   record = argument.record
     #
     def record
       head = "argument\n\n"
@@ -39,7 +36,7 @@ module Argumenta
 
     # Gets the argument's SHA-1.
     #
-    #     sha1 = argument.sha1
+    #   sha1 = argument.sha1
     #
     def sha1
       Digest::SHA1.hexdigest self.record

@@ -1,4 +1,3 @@
-
 require './lib/argumenta/version'
 
 Gem::Specification.new do |s|

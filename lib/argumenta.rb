@@ -1,4 +1,3 @@
-
 require 'argumenta/argument'
 require 'argumenta/proposition'
 require 'argumenta/version'
