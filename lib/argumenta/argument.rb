@@ -1,6 +1,9 @@
 require 'digest'
 
 module Argumenta
+  # An argument includes a title, premises, and conclusion. It has an
+  # associated object record and SHA-1 hash. The object record is
+  # similar to Git's tree. The SHA-1 identifies the argument.
   class Argument
     attr_accessor :title, :premises, :conclusion
 

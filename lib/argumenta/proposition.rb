@@ -1,6 +1,9 @@
 require 'digest'
 
 module Argumenta
+  # A proposition models an assertion as a string of text. It has an
+  # associated object record and SHA-1 hash. The object record is
+  # similar to Git's blob. The SHA-1 identifies the proposition.
   class Proposition
     attr_accessor :text
 
