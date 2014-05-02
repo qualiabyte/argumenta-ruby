@@ -1,9 +1,10 @@
-require 'argumenta/argument'
-require 'argumenta/proposition'
+require 'argumenta/objects'
 require 'argumenta/storage/dht'
 require 'argumenta/version'
 
 module Argumenta
+  include Argumenta::Objects
+
   # Raised on failure to retrieve stored objects
   class RetrievalError < Exception; end
 
