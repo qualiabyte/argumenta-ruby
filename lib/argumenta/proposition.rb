@@ -32,6 +32,18 @@ module Argumenta
       Digest::SHA1.hexdigest self.record
     end
 
+    # Validates an object as a proposition.
+    #
+    #   valid = Proposition.validate object
+    #
+    # @raise [ValidationError] On failure.
+    def self.validate(object)
+      unless object.is_a? self
+        raise ValidationError "Object must be a proposition."
+      end
+      object.validate
+    end
+
     # Validates the proposition.
     #
     #   begin
